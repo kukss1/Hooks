@@ -1,4 +1,3 @@
-
 import { AppBar, MenuItem, Toolbar, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
@@ -6,7 +5,6 @@ const Header = () => {
   return (
     <AppBar position="static">
       <Toolbar disableGutters>
-      
         <Typography
           variant="h6"
           noWrap
