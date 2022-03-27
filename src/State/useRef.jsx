@@ -1,3 +1,4 @@
+import { Button, TextField } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 
 const UseRef = () => {
@@ -23,13 +24,13 @@ const UseRef = () => {
     <div>
       <h1>Renders Count:{renderCount.current}</h1>
       <h2>Last State : {prevValue.current}</h2>
-      <input
+      <TextField
         ref={inputRef}
         type="text"
         onChange={(e) => setValue(e.target.value)}
         value={value}
       />
-      <button onClick={focus}></button>
+      <Button variant="contained" sx={{ml:1}} onClick={focus}>Focus</Button>
     </div>
   );
 };

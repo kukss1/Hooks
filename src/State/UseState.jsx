@@ -1,5 +1,6 @@
 import "../App.css"
 import React, { useState } from "react";
+import { Button } from "@mui/material";
 
 const computeInitialCounter = () => {
   console.log("bebeb");
@@ -42,11 +43,11 @@ const updateTitle = () => {
   return (
     <div className="App">
       <h1>Счетчик:{counter}</h1>
-      <button onClick={increment}>Добавить</button>
-      <button onClick={decrement}>Убрать</button>
-      <button onClick={updateTitle}>
+      <Button variant="outlined" sx={{mr:1}} onClick={increment}>Добавить</Button>
+      <Button variant="outlined" sx={{mr:1}} onClick={decrement}>Убрать</Button>
+      <Button variant="outlined" sx={{mr:1}} onClick={updateTitle}>
         Изменить Название
-      </button>
+      </Button>
 
       <pre>{JSON.stringify(state, null, 2)}</pre>
     </div>

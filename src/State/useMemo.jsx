@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { useState, useMemo, useEffect } from "react";
 
 const complexCompute = (num) => {
@@ -28,9 +29,9 @@ const UseMemo = () => {
   return (
     <div>
       <h1 style={styles}>Вычесляемое свойство:{computed}</h1>
-      <button onClick={() => setNumber((prev) => prev + 1)}>Plus</button>
-      <button onClick={() => setNumber((prev) => prev - 1)}>Minus</button>
-      <button onClick={() => setColored((prev) => !prev)}>Change</button>
+      <Button variant="text" sx={{mr:1}} onClick={() => setNumber((prev) => prev + 1)}>Plus</Button>
+      <Button variant="text" sx={{mr:1}} onClick={() => setNumber((prev) => prev - 1)}>Minus</Button>
+      <Button variant="outlined" sx={{mr:1}} color="success" onClick={() => setColored((prev) => !prev)}>Change</Button>
     </div>
   );
 };

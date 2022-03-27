@@ -22,8 +22,8 @@ const UseCallBack = () => {
   return (
     <>
       <h1 style={styles}>Elements Count:{count}</h1>
-      <Button variant="contained" onClick={() => setCount((prev) => prev + 1)}>Plus</Button>
-      <Button variant="contained" onClick={() => setColored((prev) => !prev)}>Change Color</Button>
+      <Button variant="contained" sx={{mr:2}} onClick={() => setCount((prev) => prev + 1)}>Plus</Button>
+      <Button variant="contained" sx={{mr:2}} onClick={() => setColored((prev) => !prev)}>Change Color</Button>
 
       <ItemList getItems={generateItemsFromAPI} />
     </>
