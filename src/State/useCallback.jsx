@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { useCallback, useState } from "react";
 import { ItemList } from "./ItemsList";
 
@@ -21,8 +22,8 @@ const UseCallBack = () => {
   return (
     <>
       <h1 style={styles}>Elements Count:{count}</h1>
-      <button onClick={() => setCount((prev) => prev + 1)}>Plus</button>
-      <button onClick={() => setColored((prev) => !prev)}>Change Color</button>
+      <Button variant="contained" onClick={() => setCount((prev) => prev + 1)}>Plus</Button>
+      <Button variant="contained" onClick={() => setColored((prev) => !prev)}>Change Color</Button>
 
       <ItemList getItems={generateItemsFromAPI} />
     </>
