@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Header from "./Header";
+import MyHook from "./State/MyHook";
+import UseCallBack from "./State/useCallback";
+import UseContext from "./State/useContext";
+import UseEffect from "./State/UseEffect";
+import UseMemo from "./State/useMemo";
+import UseRef from "./State/useRef";
+import UseState from "./State/UseState";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route exact path="/useState" element={<UseState />} />
+        <Route exact path="/useEffect" element={<UseEffect />} />
+        <Route exact path="/useRef" element={<UseRef />} />
+        <Route exact path="/useMemo" element={<UseMemo />} />
+        <Route exact path="/useCallBack" element={<UseCallBack/>}/>
+        <Route exact path="/useContext" element={<UseContext/>}/>
+        <Route exact path="myHook" element={<MyHook/>}/>
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
